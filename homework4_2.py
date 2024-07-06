@@ -1,10 +1,10 @@
 from pathlib import Path
-path = Path("C:/Users/Дел/Documents/My_repo/GOIT-ALGO-HW-04/path_1")
+path = Path("C:/Users/Дел/Documents/My_repo/GOIT-ALGO-HW-04/cats_file.txt")
 
-def get_cats_info(path_1):
+def get_cats_info(path):
 
   try:
-    with open("path_1.txt", 'r') as file:
+    with open(path, 'r') as file:
       cats_info = []
       for line in file:
         cat_info = line.strip().split(',')
@@ -21,5 +21,5 @@ def get_cats_info(path_1):
   except Exception as e:
     print(f"Помилка! Неочікувана помилка: {e}")
     return []
-cats_info = get_cats_info("path/to/cats_file.txt")
+cats_info = get_cats_info("C:/Users/Дел/Documents/My_repo/GOIT-ALGO-HW-04/cats_file.txt")
 print(cats_info)

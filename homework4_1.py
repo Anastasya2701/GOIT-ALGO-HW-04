@@ -1,11 +1,11 @@
 from pathlib import Path
-path = Path("C:/Users/Дел/Documents/My_repo/GOIT-ALGO-HW-04/path")
+path = Path("C:/Users/Дел/Documents/My_repo/GOIT-ALGO-HW-04/salary_file.txt")
 def total_salary(path):
     total_salary = 0
     num_developers = 0
     
     try:
-        with open('path', 'r', encoding='utf-8') as file:
+        with open(path, 'r', encoding='utf-8') as file:
             for line in file:
                 developer, salary = line.strip().split(',')
                 total_salary += int(salary)
@@ -24,7 +24,7 @@ def total_salary(path):
     average_salary = total_salary / num_developers
     return total_salary, average_salary
 
-result = total_salary("path/to/salary_file.txt")
+result = total_salary("C:/Users/Дел/Documents/My_repo/GOIT-ALGO-HW-04/salary_file.txt")
 if result:
     total, average = result
     print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
