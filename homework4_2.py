@@ -1,5 +1,5 @@
 from pathlib import Path
-path = Path("C:/Users/Дел/Documents/My_repo/First_repo/path_1")
+path = Path("C:/Users/Дел/Documents/My_repo/GOIT-ALGO-HW-04/path_1")
 
 def get_cats_info(path_1):
 
